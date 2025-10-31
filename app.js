@@ -9,6 +9,7 @@ const mongodbUri = process.env.MONGODB_URI || 'mongodb://localhost/phan-tich-du-
 mongoose.connect(mongodbUri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
+    useCreateIndex: true,
 }).then(() => {
     console.log('Kết nối tới MongoDB thành công!');
 }).catch(err => {
