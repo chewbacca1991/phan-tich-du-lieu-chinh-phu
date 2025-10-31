@@ -5,7 +5,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Connect to MongoDB
-const mongodbUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/phan-tich-du-lieu-chinh-phu';
+const mongodbUri = process.env.MONGODB_URI || 'mongodb://localhost/phan-tich-du-lieu-chinh-phu';
 mongoose.connect(mongodbUri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
