@@ -8,8 +8,7 @@ const PORT = process.env.PORT || 3000;
 const mongodbUri = process.env.MONGODB_URI || 'mongodb+srv://<username>:<password>@cluster0.mongodb.net/phan-tich-du-lieu-chinh-phu?retryWrites=true&w=majority';
 mongoose.connect(mongodbUri, {
     useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
+    useUnifiedTopology: true
 }).then(() => {
     console.log('Kết nối tới MongoDB thành công!');
 }).catch(err => {
