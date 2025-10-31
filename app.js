@@ -5,7 +5,11 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Connect to MongoDB
-const mongodbUri = process.env.MONGODB_URI || 'mongodb+srv://<username>:<password>@cluster0.mongodb.net/phan-tich-du-lieu-chinh-phu?retryWrites=true&w=majority';
+const mongodbUri = process.env.MONGODB_URI;
+if (!mongodbUri) {
+    console.error('MONGODB_URI not set.');
+    process.exit(1);
+}
 mongoose.connect(mongodbUri, {
     useNewUrlParser: true,
     useUnifiedTopology: true
